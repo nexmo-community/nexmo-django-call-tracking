@@ -1,0 +1,20 @@
+[
+  {
+    "action": "record",
+    "eventUrl": ["https://{{ request.get_host }}/record/"]
+  },
+  {
+    "action": "stream",
+    "streamUrl": ["https://{{ request.get_host }}{{ campaign.welcome_message.url }}"]
+  },
+  {
+    "action": "connect",
+    "from":"{{ campaign.inbound_number }}",
+    "endpoint": [
+      {
+        "type": "phone",
+        "number": "{{ campaign.redirect_number }}"
+      }
+    ]
+  }
+]

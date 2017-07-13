@@ -1,0 +1,6 @@
+[
+  {
+    "action": "stream",
+    "streamUrl": ["https://{{ request.get_host }}/static/campaign/audio/not-found.mp3"]
+  }
+]
